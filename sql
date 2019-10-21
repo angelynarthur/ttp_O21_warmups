@@ -19,3 +19,8 @@
 -- Feel free to peek at your previous warmup to remind yourself of the syntax.
 
 
+SELECT title, description, rental_rate,
+CASE WHEN title ILIKE '%christmas%' or title ILIKE '%halloween%' THEN title
+ELSE ' ' END AS Holiday
+FROM film
+order by Holiday;
